@@ -1,0 +1,28 @@
+form {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 15pt;
+}
+
+table {
+    font-size: 12.5pt;
+    margin: auto;
+    margin-top: 40px;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+table * {
+    text-align: center;
+    border: 2px solid black;
+}
+
+th, td {
+    padding: 5px 5px;
+}
+
+
+
+
+
+

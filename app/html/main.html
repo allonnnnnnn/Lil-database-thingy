@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Small lil sql database</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <form id="add">
+        <label>Name: </label>
+        <input type="text" placeholder="Name" required>
+        <input type="submit" value="Add Name">
+    </form>
+    <form id="search">
+        <input type="text" placeholder="Search" required>
+        <input type="submit" value="Search">
+    </form>
+    <table id="mainTable">
+        <template id="rowTemplate">
+            <tr>
+                <td class="id"></td>
+                <td class="name"></td>
+                <td class="date"></td>
+                <td>
+                    <input type="button" value="Delete">
+                </td>
+                <td>
+                    <input type="button" value="Edit">
+                </td>
+            </tr>
+        </template>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Date Added</th>
+                <th>Delete</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="5">No Data</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form id="edit" hidden>
+        <input type="text" placeholder="New Name" required>
+        <input type="submit" value="Edit">
+    </form>
+
+    <script src="/js/client.js"></script>
+</body>
+
+</html>
