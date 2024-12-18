@@ -1,1 +1,1 @@
-"# Lil-database-thingy" for my boy arshypoop
+"# Lil-database-thingy" for arshypoop
