@@ -47,7 +47,7 @@ function onDelete() {
     const tr = this.parentNode.parentNode;
 
     ajaxDELETE("/delete", tr.querySelector(".id").innerText, function () {
-        updateTable("/getData");
+        updateTable("https://lil-database-thingy.onrender.com/getData");
     });
 }
 
@@ -66,7 +66,7 @@ function onEdit() {
 
         const newName = clonedEditInputBar.querySelector("[type='text']").value;
         ajaxPOST("/updateData", `{"id": ${rowID}, "newName": "${newName}"}`, function () {
-            updateTable("/getData");
+            updateTable("https://lil-database-thingy.onrender.com/getData");
         });
 
         clonedEditInputBar.querySelector("[type='text']").value = "";
@@ -104,7 +104,7 @@ function updateTable(url, filter) {
     },
         filter);
 }
-updateTable("/getData");
+updateTable("https://lil-database-thingy.onrender.com/getData");
 
 addInputBar.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -113,8 +113,8 @@ addInputBar.addEventListener("submit", function (event) {
     const inputValue = inputBar.value;
     inputBar.value = "";
 
-    ajaxPOST("/add", inputValue, function () {
-        updateTable("/getData");
+    ajaxPOST("https://lil-database-thingy.onrender.com/add", inputValue, function () {
+        updateTable("https://lil-database-thingy.onrender.com/getData");
     });
 });
 

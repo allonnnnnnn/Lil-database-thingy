@@ -6,9 +6,9 @@ const mysql = require("mysql2");
 const app = express();
 app.use(express.text());
 
-app.use("/js", express.static("../public/js"));
-app.use("/css", express.static("../public/css"));
-app.use("/html", express.static("../app/html"));
+app.use("/js", express.static("./public/js"));
+app.use("/css", express.static("./public/css"));
+app.use("/html", express.static("./app/html"));
 
 function createDatabaseConnection() {
     const connection = mysql.createConnection({
@@ -93,7 +93,7 @@ app.post("/updateData", function (req, res) {
 });
 
 app.get("/", function (req, res) {
-    let document = fs.readFileSync("../public/main.html", "utf8");
+    let document = fs.readFileSync("./public/index.html", "utf8");
     
     res.send(document);
 });
