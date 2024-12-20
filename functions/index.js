@@ -2,7 +2,6 @@ const express = require("express");
 const fs = require("fs");
 const mysql = require("mysql2");
 // const functions = require("firebase-functions")
-const port = process.env.PORT || 4000;
 
 const app = express();
 app.use(express.text());
@@ -105,10 +104,10 @@ app.use(function (req, res) {
         .send("<html><head><title>Page not found!</title></head><body><p>Nothing here.</p></body></html>");
 });
 
-// let port = 8000;
-// app.listen(port, function () {
-//     console.log("listening on port: " + port);
-// });
+let port = 8000;
+app.listen(port, function () {
+    console.log("listening on port: " + port);
+});
 
 // exports.app = functions.https.onRequest(app);
 
