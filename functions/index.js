@@ -2,6 +2,7 @@ const express = require("express");
 const fs = require("fs");
 const mysql = require("mysql2");
 // const functions = require("firebase-functions")
+const port = process.env.PORT || 4000;
 
 const app = express();
 app.use(express.text());
