@@ -1,7 +1,7 @@
 const express = require("express");
 const fs = require("fs");
 const mysql = require("mysql2");
-const functions = require("firebase-functions")
+// const functions = require("firebase-functions")
 
 const app = express();
 app.use(express.text());
@@ -109,5 +109,5 @@ app.use(function (req, res) {
 //     console.log("listening on port: " + port);
 // });
 
-exports.app = functions.https.onRequest(app);
+// exports.app = functions.https.onRequest(app);
 
